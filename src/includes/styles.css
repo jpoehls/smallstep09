@@ -1,0 +1,127 @@
+﻿body
+{
+    font-family: Arial, Sans-Serif;
+    font-size: 12px;
+    background-color: #e1e1e1;
+    margin: 0;
+    padding: 0;
+}
+
+table
+{
+    font-family: Arial, Sans-Serif;
+    font-size: 12px;
+}
+
+th, td
+{
+    vertical-align: top;
+}
+
+th.side
+{
+    text-align: left;
+}
+
+form
+{
+    margin: 0;
+    padding: 0;
+}
+
+h1
+{
+    margin-top: 0;
+}
+
+label
+{
+    font-size: 1.2em;
+    color: #333;
+    padding: .3em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input, select
+{
+    padding: .3em;
+    font-size: 1.3em;
+    color: #666;
+    font-weight: bold;
+    /*-webkit-border-radius: 3px;
+    border: 1px solid #666;*/
+}
+
+input:focus, select:focus
+{
+    background-color: #FFFFD4;
+}
+
+input.sm
+{
+    width: 50px;
+    text-align: center;
+}
+
+input.med
+{
+    width: 120px;
+}
+
+input.lg
+{
+    width: 100%;
+}
+
+input.watermark
+{
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.goal-col
+{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #666;
+    border-right: 1px solid #666;
+    padding: .3em;
+}
+
+#main
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+}
+
+#menu
+{
+    width: 100%;
+    margin: 0 1em;
+    text-align: center;
+}
+
+#menu a
+{
+    padding: 1em;
+    border: 1px solid #ccc;
+    margin: .5em;
+    text-align: center;
+    text-decoration: none;
+    background-color: #e1e1e1;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#menu a:hover
+{
+    background-color: aqua;
+}

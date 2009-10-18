@@ -1,0 +1,1 @@
+src\web\template.py --compile "src\templates"
