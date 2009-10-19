@@ -1,4 +1,12 @@
-﻿body
+﻿/*
+ * blue: #4EC9FE;
+ * dark grey (labels): #333333;
+ * grey (watermarks): #999999;
+ * light grey (page bg): #e1e1e1;
+ * orangish: #FF9D46;
+ */
+
+body
 {
     font-family: Arial, Sans-Serif;
     font-size: 12px;
@@ -49,8 +57,6 @@ input, select
     font-size: 1.3em;
     color: #666;
     font-weight: bold;
-    /*-webkit-border-radius: 3px;
-    border: 1px solid #666;*/
 }
 
 input:focus, select:focus
@@ -79,6 +85,27 @@ input.watermark
     color: #999;
     font-weight: normal;
     font-style: italic;
+}
+
+.day {
+	-webkit-border-radius: 5px;
+	border: 1px solid #999;
+	padding: .3em;
+	font-size: 1.3em;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: default;
+	color: #999;
+}
+
+.day-hover {
+	background-color: #FF9D46;
+	color: #333;
+}
+
+.day-sel {
+	background-color: #4EC9FE;
+	color: #333;
 }
 
 .goal-col

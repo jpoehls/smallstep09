@@ -7,23 +7,7 @@
 		#raw
 	    <script type="text/javascript">
 	        $(document).ready(function() {
-	            var customCountSel = "#customCount, label[for=customCount]";
-	
-	            $(customCountSel).hide();
-	
-	            $("#count")
-	                .change(function() {
-	                    if ($(this).val() == "...") {
-	                        $(customCountSel).fadeIn('slow');
-	                    } else {
-	                        $(customCountSel).fadeOut('slow');
-	                    }
-	                })
-	                .keyup(function() { $(this).change() });
-	
-				$("#goal").watermark("do 25 push-ups a day");
-				$("#twitter-username").watermark("tweet tweet");
-				$("#email-address").watermark("ain't no spam here")
+
 	        });
 	    </script>
 		#end raw
@@ -32,12 +16,7 @@
 		<div id="main">
 		<h1>
 			<img src="/images/logo.png" alt="Small Steps" /></h1>
-		
-		#include "includes/goals.htm"
-		
-		#include "includes/settings.htm"
-		
-		#include "includes/progress.htm"
-		</div>
+			
+		<p>Welcome to the site! Please login...</p>
 	</body>
 </html>
