@@ -7,8 +7,11 @@ handlers:
 #- url: /.*
 #  script: asklogin.py
   
-- url: /includes
-  static_dir: includes
+- url: /client
+  static_dir: client
+  
+- url: /images
+  static_dir: images
   
 - url: /favicon\.ico
   static_files: favicon.ico

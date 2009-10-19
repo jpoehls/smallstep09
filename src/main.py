@@ -1,24 +1,24 @@
 import web
+import os
 from Cheetah.Template import Template
 
 urls = (
-        "/index", "index",
-        "/(.*)", "site"
+        "/", "pages",
+        "/(.*)", "pages"
 )
 
 template_folder = "pages/"
 
 app = web.application(urls, globals()) 
 
-class site:
-    def GET(self, path):
-        return "Hey buddy! You requested: " + path
-        
-class index:
-    def GET(self):
-        tmpl_file = template_folder + "index.htm"
-        template_values = { "xyz":"You",}
-        tmpl = Template( file = tmpl_file, searchList = (template_values,) )
-        return tmpl
+class pages:      
+    def GET(self, path="index"):          
+        tmpl_file = template_folder + path + ".htm"
+        if os.path.exists(tmpl_file):
+            template_values = { "xyz":"You",}
+            tmpl = Template( file = tmpl_file, searchList = (template_values,) )
+            return tmpl
+        else:
+            return "404: Page not found"
 
 main = app.cgirun()
