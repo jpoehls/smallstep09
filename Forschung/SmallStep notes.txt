@@ -1,0 +1,90 @@
+
+						|-------------|							|---------------|																										
+						|    (WILL)  	|							|     (DO)   		|																										
+						|  AMBITIONS  |							|  PERFORMANCE  |																										
+						|-------------|							|---------------|											
+
+				^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+											 (those are buttons btw)
+											 
+
+PARAMETERS FOR CREATING A NEW AMBITION ARE AS FOLLOWS:
+						
+Intervals (how often should the goal be met for this ambition)?
+	- X times a [day, month, year]
+
+Starting on (when do you want to start tracking your performance of this ambition)?
+
+Prompt (the label used to refer to this ambition, ex. '# of Push-ups', or '# of Chapters Read', or 'Walked the Dog')
+
+Input (how do you want to indicate your performance of this ambition?)															
+ - Number (ex. number of push-ups you did, or number of chapters you read)
+ - Yes/No (ex. yes i did it, or no i didn't)
+ 
+Goal (based on your input, what do you consider as meeting your ambition?)
+ - [if Q is Number] Number [greater than, less than, equal to, not equal to] X
+   (ex. i'm happy if i read 1 or more chapters)
+ - [if Q is Yes/No] Answer [yes, no] is good
+ 
+ 
+GOAL PROGRESS VISUALIZATION
+
+Charts
+	- chart of progress on goal overtime as it compares to your ambition
+		(google charts api)
+
+
+REMINDERS
+
+Twitter
+	- enter your twitter username and you'll get direct message reminders
+		when goals are due
+		
+Google Calendar
+	- provide google calendar feed to put upcoming progress checkpoints
+		on your calendar
+		
+
+INTERACTION
+
+Twitter
+	- send a 'ping' message to @smallstep to get a list
+		of goals needing progress updates. 
+ 
+ 
+WAYS TO INCREMENT PROGRESS ON YOUR GOAL
+
+Twitter
+	- enter your twitter username, and then define a hash tag for each goal you
+		want to track with twitter. then you can apply updates to the goal
+		by mentioning (or direct messaging) @smallstep with the hashtag and your update.
+		ex. dm @smallstep #pushups 15 -- this would report that you did 15 on your pushups goal!
+	
+Rss
+	- subscribe to your personal rss feed, each day that a progress update is due
+	  you'll see a post prompting you for your progress input
+	  
+Web
+	- just login to the website and do it there!
+	
+	
+we track 'quantifiable' goals
+SAMPLE GOALS
+	- do 25 pushups a day
+	- read for 30m at least 3 times a week
+	- (not supported) read for 1.5hrs every week
+	- walk the dog 3 times per week
+	- complete 1 to-do item every day
+	- read 1 chapter from the Bible every day
+	- pray every day
+	
+	
+USER SETTINGS
+	- select weekday days
+	- select weekend days  
+	- twitter username
+	- email address
+	- PER GOAL
+		- twitter reminder
+		- sms reminder
+		- email reminder
