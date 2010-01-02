@@ -20,7 +20,7 @@ class Progress(db.Model):
 
 
 ----
-WEB SERVICE METHODS
+WEB SERVICE METHODS (use a REST service setup on GAE and Agatha in the silverlight app)
 ----
 
 GetGoals() : returns every goal
