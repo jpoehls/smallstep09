@@ -1,0 +1,30 @@
+﻿<UserControl xmlns:my="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"  x:Class="SmallStep09.GoalButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="150" d:DesignWidth="200">
+
+    <Button Click="Button_Click">
+        <Button.Content>
+            <Border BorderBrush="#4EC9FE" BorderThickness="5" CornerRadius="20">
+                <Grid x:Name="LayoutRoot" Background="White" Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <my:LineSeries Grid.Row="0" x:Name="chart" Height="100"
+                                   ItemsSource="{Binding}" 
+                    DependentValuePath="Value" 
+                    IndependentValuePath="Key"
+                    AnimationSequence="FirstToLast"
+                    Title="Life" IsSelectionEnabled="True" />
+                    <TextBlock Grid.Row="1" Text="do 25 push-ups a day"
+                       FontSize="15" TextAlignment="Center"
+                       Foreground="Gray"/>
+                </Grid>
+            </Border>
+        </Button.Content>
+    </Button>
+</UserControl>

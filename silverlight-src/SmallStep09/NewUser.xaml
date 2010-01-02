@@ -1,0 +1,32 @@
+﻿<controls:ChildWindow x:Class="SmallStep09.NewUser"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="400" Height="300"
+           Title="Sign up" xmlns:dataInput="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input">
+  <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="81*" />
+            <ColumnDefinition Width="297*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+      <RowDefinition Height="41*" />
+            <RowDefinition Height="41*" />
+            <RowDefinition Height="42*" />
+            <RowDefinition Height="102*" />
+            <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="4" Grid.Column="1" />
+    <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="4" Grid.Column="1" />
+        <dataInput:Label Height="41" HorizontalAlignment="Left" Margin="22,12,0,0" Name="label1" VerticalAlignment="Top" Width="69" Content="Username" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+        <dataInput:Label Content="Password" Height="41" HorizontalAlignment="Left" Margin="27,8,0,0" Name="label2" VerticalAlignment="Top" Width="69" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+        <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="6,12,0,0" Name="textBox1" VerticalAlignment="Top" Width="279" />
+        <TextBox Grid.Column="1" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="6,8,0,0" Name="textBox2" VerticalAlignment="Top" Width="279" />
+        <dataInput:Label Content="How did you find us?" Grid.RowSpan="2" Height="41" HorizontalAlignment="Left" Margin="22,14,0,0" Name="label3" VerticalAlignment="Top" Width="126" Grid.ColumnSpan="2" Grid.Row="2" />
+        <RadioButton Content="Search Engine" Grid.Column="1" Grid.Row="3" Height="16" HorizontalAlignment="Left" Margin="51,9,0,0" Name="radioButton1" VerticalAlignment="Top" Width="120" />
+        <RadioButton Content="Twitter" Height="16" HorizontalAlignment="Left" Margin="51,31,0,0" Name="radioButton2" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.Row="3" />
+        <RadioButton Content="Other" Height="16" HorizontalAlignment="Left" Margin="51,53,0,0" Name="radioButton3" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.Row="3" />
+        <TextBox Grid.Column="1" Grid.Row="3" Height="23" HorizontalAlignment="Left" Margin="110,53,0,0" Name="textBox3" VerticalAlignment="Top" Width="175" />
+    </Grid>
+</controls:ChildWindow>

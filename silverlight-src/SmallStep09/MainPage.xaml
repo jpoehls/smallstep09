@@ -1,0 +1,76 @@
+﻿<UserControl xmlns:my1="clr-namespace:SmallStep09.Controls"   x:Class="SmallStep09.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="600" xmlns:my="clr-namespace:SmallStep09">
+
+    <Grid x:Name="LayoutRoot" MinWidth="510">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="1,0" ColorInterpolationMode="SRgbLinearInterpolation" MappingMode="RelativeToBoundingBox">
+                <GradientStopCollection>
+                    <GradientStop Color="White" Offset=".3" />
+                    <GradientStop Color="#FFAD4E" Offset="1.5" />
+                </GradientStopCollection>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid Grid.Row="0" Grid.Column="0" Width="500" Margin="0 25">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="-80 0 0 10"
+                    Grid.Row="0" Grid.Column="0">
+                <TextBlock FontSize="24" VerticalAlignment="Bottom" Style="{StaticResource BlueStoneText}">Goals</TextBlock>
+                <TextBlock FontSize="18" VerticalAlignment="Bottom" Style="{StaticResource NormalText}"
+                       Margin="10 0">are achieved</TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Grid.Row="1" Grid.Column="0">
+                <TextBlock FontSize="18" VerticalAlignment="Center" Margin="0 8 10 0" Style="{StaticResource NormalText}">one</TextBlock>
+                <my1:Logo></my1:Logo>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="50 10 0 0"
+                    Grid.Row="2" Grid.Column="0">
+                <TextBlock FontSize="18" VerticalAlignment="Bottom" Style="{StaticResource NormalText}">at a time.</TextBlock>
+            </StackPanel>
+        </Grid>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Grid.Row="1" Grid.Column="0">
+            <Button
+                    Width="150"
+                    Height="40"
+                    FontSize="14" FontWeight="Bold"
+                    Margin="5 0"
+                    Click="Button_Click_1" Foreground="#051E21" Content="Start Stepping">
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
