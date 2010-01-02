@@ -1,0 +1,34 @@
+class Goal(db.Model):
+	user = db.UserProperty(required=True)
+	name = db.StringProperty(required=True)
+	target_count = db.IntegerProperty()
+	target_interval = db.IntegerProperty()
+	end_date = db.DateProperty()
+
+class Profile(db.Model):
+	user = db.UserProperty(required=True)
+	weekday_days = db.ListProperty(int)
+	weekend_days = db.StringProperty(int)
+	twitter_username = db.StringProperty()
+	email_address = db.StringProperty()
+	mobile_phone = db.PhoneNumberProperty()
+
+class Progress(db.Model):
+	goal = db.ReferenceProperty(Goal)
+	count = db.IntegerProperty()
+	date = db.DateProperty()
+
+
+----
+WEB SERVICE METHODS
+----
+
+GetGoals() : returns every goal
+CreateGoal() : creates a new goal
+UpdateGoal() : updates a goal's definition
+DeleteGoal() : deletes a goal and all progress
+GetProgress(int goal_id, date start_date, date end_date) : returns all progress for the given date range
+CreateProgress(int goal_id, date date, int count) : updates a goal's progress
+DeleteProgress(int progress_id) : deletes an individual progress record
+GetProfile(int user_id) : returns the user's profile
+UpdateProfile(int user_id, ...) : updates the user's profile
