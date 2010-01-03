@@ -27,7 +27,8 @@ namespace SmallStep09
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            NewUser ch = new NewUser();
+            //NewUser ch = new NewUser();
+            ChildWindow1 ch = new ChildWindow1();
             ch.Show();
         }
     }

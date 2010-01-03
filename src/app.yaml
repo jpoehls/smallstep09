@@ -22,5 +22,8 @@ handlers:
   static_files: robots.txt
   upload: robots\.txt
   
+- url: /svc/.*
+  script: services.py
+  
 - url: /.*
   script: main.py

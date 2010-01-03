@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using SmallStep09.Services;
 
 namespace SmallStep09
 {
@@ -21,6 +22,13 @@ namespace SmallStep09
 
         private void OKButton_Click(object sender, RoutedEventArgs e)
         {
+            var svc = new GoalService();
+            svc.ValidateUserAsync(uxUsername.Text.Trim(), uxPassword.Text, UserValidated);
+        }
+
+        private void UserValidated(bool isValidUser)
+        {
+            MessageBox.Show("User is valid? " + isValidUser);
             this.DialogResult = true;
         }
 

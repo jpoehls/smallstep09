@@ -32,3 +32,7 @@ CreateProgress(int goal_id, date date, int count) : updates a goal's progress
 DeleteProgress(int progress_id) : deletes an individual progress record
 GetProfile(int user_id) : returns the user's profile
 UpdateProfile(int user_id, ...) : updates the user's profile
+
+http://.../services/goals/
+http://.../services/progress/
+http://.../services/profiles/

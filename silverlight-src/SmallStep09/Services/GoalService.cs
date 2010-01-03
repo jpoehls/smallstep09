@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Net.Browser;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -41,13 +42,26 @@ namespace SmallStep09.Services
             return list;
         }
 
-        public bool ValidateUser(string username, string password)
+        public void ValidateUserAsync(string username, string password, Action<bool> callback)
         {
-            if (username == "jpoehls")
+            var url = new Uri("http://localhost:8080/svc/profiles/" + username);
+
+            var wc = new WebClient();
+            wc.DownloadStringCompleted += ValidateUserCompleted;
+            wc.DownloadStringAsync(url, callback);
+        }
+
+        private void ValidateUserCompleted(object sender, DownloadStringCompletedEventArgs e)
+        {
+            var callback = (Action<bool>) e.UserState;
+            if (e.Result.Contains("joshua"))
             {
-                return true;
+                callback(true);
             }
-            return false;
+            else
+            {
+                callback(false);
+            }
         }
     }
 }
