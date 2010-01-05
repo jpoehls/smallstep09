@@ -6,3 +6,5 @@
 *.user
 *.suo
 _ReSharper*
+
+src/client/*.xap

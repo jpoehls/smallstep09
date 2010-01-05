@@ -6,6 +6,11 @@ api_version: 1
 handlers:
 #- url: /.*
 #  script: asklogin.py
+
+- url: /client/smallstep09\.xap
+  static_files: /client/smallstep09.xap
+  upload: /client/smallstep09\.xap
+  mime_type: application/x-silverlight-2
   
 - url: /client
   static_dir: client
@@ -21,6 +26,10 @@ handlers:
 - url: /robots\.txt
   static_files: robots.txt
   upload: robots\.txt
+  
+- url: /testpage.html
+  static_files: testpage.html
+  upload: testpage\.html
   
 - url: /svc/.*
   script: services.py

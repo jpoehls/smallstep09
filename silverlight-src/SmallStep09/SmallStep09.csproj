@@ -162,4 +162,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetDir)smallstep09.xap" "../../../../src/client/smallstep09.xap"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
