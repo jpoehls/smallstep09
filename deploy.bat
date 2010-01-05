@@ -1,1 +1,1 @@
-appcfg.py --email=jdpoehls@gmail.com update ./src
+appcfg.py --email=jdpoehls@gmail.com update ./src/web

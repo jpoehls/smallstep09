@@ -163,6 +163,6 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetDir)smallstep09.xap" "../../../../src/client/smallstep09.xap"</PostBuildEvent>
+    <PostBuildEvent>copy "$(TargetDir)smallstep09.xap" "../../../web/client/smallstep09.xap"</PostBuildEvent>
   </PropertyGroup>
 </Project>

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmallStep09", "SmallStep09\SmallStep09.csproj", "{B2EAB6FD-79B5-468D-86D6-74D591CD8C84}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverStep", "src\silverstep\SilverStep.csproj", "{B2EAB6FD-79B5-468D-86D6-74D591CD8C84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
