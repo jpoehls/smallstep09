@@ -10,10 +10,4 @@ namespace SmallStep09.Model
         Numeric,
         YesNo
     }
-
-    public enum YesNo
-    {
-        Yes,
-        No
-    }
 }

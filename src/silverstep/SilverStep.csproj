@@ -91,13 +91,24 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Goal.cs" />
+    <Compile Include="Model\DataObject.cs" />
+    <Compile Include="Model\GoalDefinition.cs" />
+    <Compile Include="Model\IGoalCriteria.cs" />
+    <Compile Include="Model\GoalSummary.cs" />
+    <Compile Include="Model\NumericCriteria.cs" />
+    <Compile Include="Model\Observable.cs" />
     <Compile Include="Model\ProgressInputType.cs" />
+    <Compile Include="Model\TrendPoint.cs" />
+    <Compile Include="Model\YesNo.cs" />
+    <Compile Include="Model\YesNoCriteria.cs" />
     <Compile Include="NewUser.xaml.cs">
       <DependentUpon>NewUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\GoalService.cs" />
+    <Compile Include="Views\GoalList.xaml.cs">
+      <DependentUpon>GoalList.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -135,6 +146,10 @@
     <Page Include="NewUser.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\GoalList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
