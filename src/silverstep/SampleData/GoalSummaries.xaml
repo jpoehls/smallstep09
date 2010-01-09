@@ -1,0 +1,36 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:Model="clr-namespace:SmallStep09.Model">
+    <Model:GoalSummaryList x:Key="SampleGoalSummaries">
+
+        <Model:GoalSummary
+            Id="1"
+            Statement="Do at least 25 push-ups a day"
+            TotalIntervalsPassed="3"
+            TotalSuccessfulIntervals="2">
+            <Model:GoalSummary.RecentTrend>
+                <Model:TrendPointList>
+                    <Model:TrendPoint
+                    IntervalDate="1/1/2010"
+                    IntervalTotal="30"
+                    GoalTotal="25"
+                    GoalMet="True" />
+                    <Model:TrendPoint
+                    IntervalDate="1/2/2010"
+                    IntervalTotal="0"
+                    GoalTotal="25"
+                    GoalMet="False" />
+                    <Model:TrendPoint
+                    IntervalDate="1/3/2010"
+                    IntervalTotal="25"
+                    GoalTotal="25"
+                    GoalMet="True" />
+                </Model:TrendPointList>
+            </Model:GoalSummary.RecentTrend>
+        </Model:GoalSummary>
+
+        <Model:GoalSummary Id="2" />
+
+    </Model:GoalSummaryList>
+</ResourceDictionary>

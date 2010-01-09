@@ -12,9 +12,9 @@ using System.Windows.Shapes;
 
 namespace SmallStep09.Views
 {
-    public partial class GoalList : UserControl
+    public partial class GoalSummaryList : UserControl
     {
-        public GoalList()
+        public GoalSummaryList()
         {
             InitializeComponent();
         }

@@ -3,21 +3,23 @@
            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
            xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
            Width="400" Height="300"
-           Title="Log in" xmlns:dataInput="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input">
-  <Grid x:Name="LayoutRoot" Margin="2">
+           Title="Log in" xmlns:dataInput="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input" xmlns:Views="clr-namespace:SmallStep09.Views">
+    <Grid x:Name="LayoutRoot" Margin="2">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="99*" />
             <ColumnDefinition Width="279*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-      <RowDefinition Height="82*" />
+            <RowDefinition Height="82*" />
             <RowDefinition Height="66*" />
             <RowDefinition Height="78*" />
             <RowDefinition Height="Auto" />
-    </Grid.RowDefinitions>
+        </Grid.RowDefinitions>
 
-    <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="3" Grid.Column="1" />
-    <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="3" Grid.Column="1" />
+        <Views:GoalSummaryList Height="200" Width="400" />
+
+        <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="3" Grid.Column="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="3" Grid.Column="1" />
         <dataInput:Label HorizontalAlignment="Left" Margin="37,32,0,0" Name="label1" Width="65" HorizontalContentAlignment="Right" Content="Username" Grid.ColumnSpan="2" VerticalContentAlignment="Bottom" />
         <dataInput:Label Content="Password" Grid.ColumnSpan="2" Height="50" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="42,16,0,0" Name="label2" VerticalAlignment="Top" Width="58" Grid.Row="1" />
         <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="6,59,0,0" Name="uxUsername" VerticalAlignment="Top" Width="261" />

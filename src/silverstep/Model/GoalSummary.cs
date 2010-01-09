@@ -7,7 +7,7 @@ namespace SmallStep09.Model
     {
         public GoalSummary()
         {
-            RecentTrend = new ObservableCollection<TrendPoint>();
+            RecentTrend = new TrendPointList();
         }
 
         /// <summary>
@@ -18,7 +18,7 @@ namespace SmallStep09.Model
         /// <summary>
         /// List of recent trend points for this goal.
         /// </summary>
-        public ObservableCollection<TrendPoint> RecentTrend { get; set; }
+        public TrendPointList RecentTrend { get; set; }
 
         /// <summary>
         /// Total number of intervals that have passed

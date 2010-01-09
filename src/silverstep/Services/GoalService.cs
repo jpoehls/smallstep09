@@ -1,46 +1,17 @@
 ﻿using System;
-using System.Net;
-using System.Net.Browser;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Ink;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Net;
 using SmallStep09.Model;
 
 namespace SmallStep09.Services
 {
     public class GoalService
     {
-//        public IEnumerable<Goal> GetActiveGoals()
-//        {
-//            var list = new List<Goal>
-//            {
-//                new Goal{ 
-//                    Id=1,
-//                    InputType=ProgressInputType.Numeric,
-//                    Prompt="Do at least 25 push-ups a day",
-//                    PassingCriteria=new NumericCriteria{
-//                        MinimumPassingValue=25,
-//                        MaximumPassingValue=int.MaxValue
-//                    }
-//                },
-//                new Goal{ 
-//                    Id=2,
-//                    InputType=ProgressInputType.YesNo,
-//                    Prompt="Pray every day",
-//                    PassingCriteria=new YesNoCriteria{
-//                        PassingAnswer=YesNo.Yes
-//                    }
-//                }
-//            };
-//
-//            return list;
-//        }
+        public IList<GoalSummary> GetActiveGoals()
+        {
+            return null;
+        }
 
         public void ValidateUserAsync(string username, string password, Action<bool> callback)
         {
@@ -53,7 +24,7 @@ namespace SmallStep09.Services
 
         private void ValidateUserCompleted(object sender, DownloadStringCompletedEventArgs e)
         {
-            var callback = (Action<bool>) e.UserState;
+            var callback = (Action<bool>)e.UserState;
             if (e.Result.Contains("joshua"))
             {
                 callback(true);

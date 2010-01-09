@@ -18,7 +18,7 @@ namespace SmallStep09.Model
 
         private bool _goalMet;
         private int _goalTotal;
-        private DateTime _intervalDate;
+        private string _intervalDate;
         private int _intervalTotal;
 
 
@@ -79,7 +79,7 @@ namespace SmallStep09.Model
         /// This should match the ending date
         /// for this interval.
         /// </summary>
-        public DateTime IntervalDate
+        public string IntervalDate
         {
             get { return _intervalDate; }
             set
