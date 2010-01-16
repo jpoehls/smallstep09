@@ -1,0 +1,169 @@
+
+<!-- saved from url=(0022)http://localhost:8080/ -->
+<HTML><STYLE>#gtasks_box {
+-webkit-border-radius:5px;
+background:#fff;
+width:300px;
+border:1px solid #ccc;
+position:fixed;
+z-index:999;
+height:500px;
+bottom:0;
+right:0;
+}
+
+#gtasks_box_drag {
+height:20px;
+background:#ccc url(popintop.png);
+cursor:move;
+-webkit-border-radius-topleft:5px;
+-webkit-border-radius-topright:5px;
+}
+
+#gtasks_box_iframe {
+border:0;
+height:480px;
+}</STYLE><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<LINK rel="stylesheet" type="text/css" href="./Small Steps_files/styles.css">
+		<TITLE>Small Steps</TITLE>
+		<SCRIPT type="text/javascript" src="./Small Steps_files/jquery.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="./Small Steps_files/jquery.watermark.js"></SCRIPT>
+		<SCRIPT type="text/javascript" src="./Small Steps_files/jgcharts.js"></SCRIPT>
+	    <SCRIPT type="text/javascript">
+	        $(document).ready(function() {
+	            var customCountSel = "#customCount, label[for=customCount]";
+	
+	            $(customCountSel).hide();
+	
+	            $("#count")
+	                .change(function() {
+	                    if ($(this).val() == "...") {
+	                        $(customCountSel).fadeIn('slow');
+	                    } else {
+	                        $(customCountSel).fadeOut('slow');
+	                    }
+	                })
+	                .keyup(function() { $(this).change() });
+	
+				$("#goal").watermark("do 25 push-ups a day");
+				$("#twitter-username").watermark("tweet tweet");
+				$("#email-address").watermark("ain't no spam here")
+				$("#cell-phone").watermark("812-555-1234 text me!")
+				
+				$(".day")
+					.mouseover(function(){
+						if (!$(this).hasClass('day-sel')) {
+							$(this).addClass('day-hover');
+						}
+					})
+					.mouseout(function(){
+						if (!$(this).hasClass('day-sel')) {
+							$(this).removeClass('day-hover');
+						}
+					})
+					.click(function(){
+						$(this).toggleClass('day-sel');						
+					});
+	        });
+	    </SCRIPT>
+	</HEAD><BODY>
+		<DIV id="main">
+		<H1>
+			<IMG src="./Small Steps_files/logo.png" alt="Small Steps"></H1>
+		
+		<P>Hello there small-stepper test@example.com! When you are ready to leave
+		you can <A href="http://localhost:8080/_ah/login?continue=http%3A//localhost%3A8080/&action=Logout">logout here</A>.</P>
+			
+		<IMG src="./Small Steps_files/chart">
+		
+<P>
+    <LABEL for="goal">
+        My goal is to</LABEL><BR>
+    <INPUT type="text" id="goal" name="goal" class="lg watermark"><BR>
+    <LABEL for="count">
+        at least</LABEL>
+    <SELECT id="count" name="count">
+        <OPTION>once</OPTION>
+        <OPTION>twice</OPTION>
+        <OPTION>...</OPTION>
+    </SELECT>
+    <INPUT id="customCount" name="customCount" type="text" class="sm" value="4" style="display: none; ">
+    <LABEL for="customCount" style="display: none; ">
+        times</LABEL>
+    <LABEL for="interval">
+        every</LABEL>
+    <SELECT id="interval" name="interval">
+        <OPTION selected="">day</OPTION>
+        <OPTION>weekday</OPTION>
+        <OPTION>weekend</OPTION>
+        <OPTION>week</OPTION>
+        <OPTION>month</OPTION>
+    </SELECT><BR>
+    <LABEL for="duration">
+        for the next</LABEL>
+    <SELECT id="duration" name="duration">
+        <OPTION>week</OPTION>
+        <OPTION>30 days</OPTION>
+        <OPTION>90 days</OPTION>
+        <OPTION>60 days</OPTION>
+        <OPTION>6 months</OPTION>
+        <OPTION>year</OPTION>
+    </SELECT>
+    <INPUT style="margin-left: 2em;" id="create" name="create" type="button" value="Start Stepping!">
+</P>		
+<H2>
+    Settings</H2>
+<P>
+	<LABEL>
+		Weekday days</LABEL><BR><BR>
+	<SPAN class="day">mon</SPAN>&nbsp;
+	<SPAN class="day">tue</SPAN>&nbsp;
+	<SPAN class="day">wed</SPAN>&nbsp;
+	<SPAN class="day">thr</SPAN>&nbsp;
+	<SPAN class="day">fri</SPAN>&nbsp;
+	<SPAN class="day">sat</SPAN>&nbsp;
+	<SPAN class="day">sun</SPAN>
+</P>
+<P>
+	<LABEL>
+		Weekend days</LABEL><BR><BR>
+	<SPAN class="day">mon</SPAN>&nbsp;
+	<SPAN class="day">tue</SPAN>&nbsp;
+	<SPAN class="day">wed</SPAN>&nbsp;
+	<SPAN class="day">thr</SPAN>&nbsp;
+	<SPAN class="day">fri</SPAN>&nbsp;
+	<SPAN class="day">sat</SPAN>&nbsp;
+	<SPAN class="day">sun</SPAN>
+</P>
+<P>
+    <LABEL for="twitter-username">
+        Twitter Username</LABEL><BR>
+    <INPUT type="text" class="lg watermark" id="twitter-username" name="twitter-username"><BR><BR>
+    <LABEL for="email-address">
+        E-mail Address</LABEL><BR>
+    <INPUT type="text" class="lg watermark" id="email-address" name="email-address"><BR><BR>
+    <LABEL for="cell-phone">Mobile Phone Number (for SMS)</LABEL>
+    <INPUT type="text" class="lg watermark" id="cell-phone" name="cell-phone">
+</P>		
+<H2 style="margin-top: 3em;">
+    Today's Goals</H2>
+<TABLE cellpadding="0" cellspacing="0">
+    <TBODY><TR>
+        <TD class="goal-col">
+            do 25 push-ups
+        </TD>
+    </TR>
+</TBODY></TABLE>
+<H2>
+    Week's Goals</H2>
+<TABLE cellpadding="0" cellspacing="0">
+    <TBODY><TR>
+        <TD class="goal-col">
+            walk the dog 3 times
+        </TD>
+    </TR>
+</TBODY></TABLE>		
+		<DIV id="#line1"></DIV>
+		</DIV>
+	
+<DIV id="gtasks_box" style="display: none; " class="ui-draggable"><DIV id="gtasks_box_drag"></DIV><IFRAME id="gtasks_box_iframe" src="./Small Steps_files/ig.htm"></IFRAME></DIV></BODY></HTML>

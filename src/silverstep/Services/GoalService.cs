@@ -24,6 +24,7 @@ namespace SmallStep09.Services
 
         private void ValidateUserCompleted(object sender, DownloadStringCompletedEventArgs e)
         {
+            
             var callback = (Action<bool>)e.UserState;
             if (e.Result.Contains("joshua"))
             {

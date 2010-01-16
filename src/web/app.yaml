@@ -33,6 +33,3 @@ handlers:
   
 - url: /svc/.*
   script: services.py
-  
-- url: /.*
-  script: main.py

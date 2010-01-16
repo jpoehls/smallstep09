@@ -3,24 +3,27 @@ from google.appengine.ext.webapp.util import run_wsgi_app
 from google.appengine.ext import db
 
 class Profile(db.Model):
-    username = db.StringProperty(required=True)
+    email_address = db.StringProperty(required=True)
+    password = db.StringProperty()
     weekday_days = db.ListProperty(int)
-    weekend_days = db.StringProperty(int)
+    weekend_days = db.ListProperty(int)
     twitter_username = db.StringProperty()
-    email_address = db.StringProperty()
     mobile_phone = db.PhoneNumberProperty()
 
 class Goal(db.Model):
     user = db.ReferenceProperty(Profile, required=True)
-    name = db.StringProperty(required=True)
-    target_count = db.IntegerProperty()
-    target_interval = db.IntegerProperty()
+    statement = db.StringProperty(required=True)
+    count = db.IntegerProperty(); # target count that must be reached per rep
+    count_descriptor = db.StringProperty() # what is being counted? (ex. minutes|push-ups|chapters)
+    interval = db.StringProperty() # day|weekday|weekend|week|month
+    reps = db.IntegerProperty(); # how many times does the count have to be reached per interval
+    start_date = db.DateProperty(auto_now_add=True)
     end_date = db.DateProperty()
 
 class Progress(db.Model):
     goal = db.ReferenceProperty(Goal)
     count = db.IntegerProperty()
-    date = db.DateTimeProperty(auto_now_add=True)
+    timestamp = db.DateTimeProperty(auto_now_add=True)
 
 class GoalSvc(webapp.RequestHandler):
     def get(self):

@@ -20,6 +20,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "web", "src\web\", "{0B99872
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50323"
 		ProjOutputReferences = "{B2EAB6FD-79B5-468D-86D6-74D591CD8C84}|client|false;"
 	EndProjectSection
 EndProject
